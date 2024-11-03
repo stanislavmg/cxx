@@ -1,5 +1,4 @@
-#ifndef UNORDERED_MAP_H
-#define UNORDERED_MAP_H
+#pragma once
 
 #include <cstddef>
 #include <memory>
@@ -8,10 +7,11 @@
 namespace cnt
 {
 
-template <typename T>
+template <typename Key, typename Value>
 struct Bucket
 {
-	T	data;
+	Key		key;
+	Value	val;
 	std::unique_ptr<Bucket<T>> next;
 	Bucket(T _data): data(_data), next(nullptr) {}
 };
@@ -40,5 +40,3 @@ public:
 }
 
 #include "unordered_map.tpp"
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef STACK_H
-#define STACK_H
+#pragma once
 
 #include <memory>
 #include <stdexcept>
@@ -42,5 +41,3 @@ public:
 }
 
 #include "stack.tpp"
-
-#endif
